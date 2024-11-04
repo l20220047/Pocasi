@@ -11,7 +11,7 @@ if ('serviceWorker' in navigator) {
 }
 
 function getTemp(city, id) {
-    const apiKey = "6655ee54cb308f830a12f9f17ca78ec3";
+    const apiKey = "93e2ead4374fbd909285ee33a8e591c4";
     if(city != "") {
         fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apiKey + "&units=metric&lang=cs")
         .then(response => response.json())
