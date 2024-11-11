@@ -12,7 +12,7 @@ const cacheAssets = [
 
 const WEATHER_API_URL = "https://api.openweathermap.org/data/2.5/weather";
 
-self.addEventListener('install', event => {
+self.addEventListener('install', event => { //event listener = proces který čeká na určitou akci S
   console.log("Service Worker installed");
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
@@ -26,7 +26,7 @@ self.addEventListener('activate', event => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
     caches.keys().then(cacheNames => {
-      return Promise.all(
+      return Promise.all( //proise = prislib o podani informace
         cacheNames.map(cacheName => {
           if (cacheWhitelist.indexOf(cacheName) === -1) {
             return caches.delete(cacheName);
@@ -64,7 +64,7 @@ self.addEventListener('fetch', event => {
     );
   } else {
     // Pro jiné požadavky než API odpovídáme ze sítě nebo z cache
-    event.respondWith(
+    event.respondWith(//obsulha načítání statických souborů
       caches.match(event.request).then(cachedResponse => {
         return cachedResponse || fetch(event.request);
       })

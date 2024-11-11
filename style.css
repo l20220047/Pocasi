@@ -2,11 +2,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: red;
+    background-image: url(obrazek.jpg);
 }
 
 #weather, #dobronin, #jihlava, #city {
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid rgb(255, 0, 0);
     padding: 10px;
     margin: 10px;
 }
@@ -21,7 +23,4 @@ input, button {
     padding: 10px;
 }
 
-body {
-    background-image: url(obrazek.jpg);
-}
 

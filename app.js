@@ -36,7 +36,7 @@ function getTemp(city, id) {
 }
 
 window.onload = function() {
-    getTemp("Polná", "polna");
+    getTemp("Dobronín", "dobronin");
     getTemp("Jihlava", "jihlava");
 };
 
